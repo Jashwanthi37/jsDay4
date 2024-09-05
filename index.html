@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 10px;
+            margin-top: 10px;
+            background-color: aqua;
+            font-size: 20px;
+            width: 100%;
+        }
+        .images1,.images2,.images3{
+            display: none;
+        }
+        .tasks1:focus-within ~.images1{
+            display: block;
+        }
+        .tasks2:focus-within ~.images2{
+            display: block;
+        }
+        .tasks3:focus-within ~.images3{
+            display: block;
+        }
+        @media screen and(width<600px) {
+            button{
+                width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <button class="tasks1">Task1,Task2</button><br>
+    <div class="images1">
+        <img src="./task1,2.png" width="100%">
+    </div>
+    <button class="tasks2">Task3,Task4</button><br>
+    <div class="images2">
+        <img src="./task3,4.png" width="100%">
+    </div>
+    <button class="tasks3">Task5,Task6</button><br>
+    <div class="images3">
+        <img src="./task5,6.png" width="100%">
+    </div>
+    </header>
+</body>
+</html>
